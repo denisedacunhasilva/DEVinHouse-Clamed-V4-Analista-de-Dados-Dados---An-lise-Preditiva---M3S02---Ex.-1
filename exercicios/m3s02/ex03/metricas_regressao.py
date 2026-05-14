@@ -23,7 +23,7 @@ def main() -> None:
     y_pred = modelo.predict(X_test)
     metricas = avaliar_modelo_regressao(y_test, y_pred)
 
-    print("Exercicio M3S02 - Ex03")
+    print("Exercício M3S02 - Ex03")
     print()
     print(f"MAE: {metricas['mae']:.4f}")
     print(f"RMSE: {metricas['rmse']:.4f}")

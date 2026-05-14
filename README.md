@@ -1,7 +1,10 @@
-# Projeto Analise Preditiva
+# DEVinHouse Clamed V4 - Análise Preditiva
 
-Repositorio organizado para crescer por modulo e por exercicio, sem misturar
-codigo reutilizavel com entregas pontuais da disciplina.
+Repositório com exercícios da trilha Analista de Dados do DEVinHouse Clamed V4,
+focado em análise preditiva com Python, pandas e scikit-learn.
+
+Este projeto organiza os exercícios por módulo e por exercício, separando
+respostas teóricas, scripts de modelagem e funções reutilizáveis.
 
 ## Estrutura atual
 
@@ -19,7 +22,6 @@ projeto_analise_preditiva/
 |   |   |   |-- README.md
 |   |   |-- ex03/
 |   |   |   |-- README.md
-|   |   |   |-- cross_validation_regressao_linear.py
 |   |   |-- ex04/
 |   |   |   |-- README.md
 |   |-- m3s02/
@@ -43,6 +45,7 @@ projeto_analise_preditiva/
 |   |   |   |-- comparar_modelos.py
 |   |   |-- ex03/
 |   |   |   |-- README.md
+|   |   |   |-- cross_validation_regressao_linear.py
 |   |   |-- ex04/
 |   |   |   |-- README.md
 |-- src/
@@ -50,24 +53,25 @@ projeto_analise_preditiva/
 |   |   |-- __init__.py
 |   |   |-- config.py
 |   |   |-- data_utils.py
+|   |   |-- model_utils.py
 |-- main.py
 |-- requirements.txt
 |-- .gitignore
 ```
 
-## Como o projeto foi separado
+## Como o projeto foi organizado
 
-- `src/analise_preditiva/`: funcoes compartilhadas entre exercicios.
-- `src/analise_preditiva/config.py`: configuracoes centrais de reproducibilidade.
-- `exercicios/m3s01/`: exercicios teoricos e interpretativos.
-- `exercicios/m3s02/ex01/`: codigo para separacao de `X` e `y`.
-- `exercicios/m3s02/ex02/`: codigo da divisao treino/teste com `train_test_split`.
-- `exercicios/m3s02/ex03/`: metricas de avaliacao do modelo de regressao.
-- `exercicios/m3s02/ex04/`: interpretacao das metricas do `Ex03`.
+- `src/analise_preditiva/`: funções compartilhadas entre os exercícios.
+- `src/analise_preditiva/config.py`: configurações centrais de reprodutibilidade.
+- `exercicios/m3s01/`: exercícios teóricos e interpretativos.
+- `exercicios/m3s02/ex01/`: código para separação de `X` e `y`.
+- `exercicios/m3s02/ex02/`: código da divisão treino/teste com `train_test_split`.
+- `exercicios/m3s02/ex03/`: métricas de avaliação do modelo de regressão.
+- `exercicios/m3s02/ex04/`: interpretação das métricas do `Ex03`.
 - `exercicios/m3s03/ex01/`: segundo modelo com `DecisionTreeRegressor`.
-- `exercicios/m3s03/ex02/`: comparacao entre Regressao Linear e Arvore de Decisao.
-- `exercicios/m3s03/ex03/`: validacao cruzada da Regressao Linear com `cross_val_score`.
-- `exercicios/m3s03/ex04/`: garantia de reproducibilidade e resposta conceitual.
+- `exercicios/m3s03/ex02/`: comparação entre Regressão Linear e Árvore de Decisão.
+- `exercicios/m3s03/ex03/`: validação cruzada da Regressão Linear com `cross_val_score`.
+- `exercicios/m3s03/ex04/`: garantia de reprodutibilidade e resposta conceitual.
 - `data/raw/`: base local usada no projeto.
 
 ## Base de dados
@@ -92,61 +96,61 @@ Fluxo geral do projeto:
 python main.py
 ```
 
-Exercicio 1:
+M3S02 Exercício 1:
 
 ```powershell
 python exercicios/m3s02/ex01/separar_xy.py
 ```
 
-Exercicio 2:
+M3S02 Exercício 2:
 
 ```powershell
 python exercicios/m3s02/ex02/train_test_split.py
 ```
 
-Exercicio 3:
+M3S02 Exercício 3:
 
 ```powershell
 python exercicios/m3s02/ex03/metricas_regressao.py
 ```
 
-Exercicio 4:
+M3S02 Exercício 4:
 
 - [Resposta do Ex04](/C:/Users/deni_/projeto_analise_preditiva/exercicios/m3s02/ex04/README.md)
 
-M3S03 Exercicio 1:
+M3S03 Exercício 1:
 
 ```powershell
 python exercicios/m3s03/ex01/decision_tree_regressor.py
 ```
 
-M3S03 Exercicio 2:
+M3S03 Exercício 2:
 
 ```powershell
 python exercicios/m3s03/ex02/comparar_modelos.py
 ```
 
-M3S03 Exercicio 3:
+M3S03 Exercício 3:
 
 ```powershell
 python exercicios/m3s03/ex03/cross_validation_regressao_linear.py
 ```
 
-M3S03 Exercicio 4:
+M3S03 Exercício 4:
 
 - [Resposta do Ex04](/C:/Users/deni_/projeto_analise_preditiva/exercicios/m3s03/ex04/README.md)
 
-Respostas teoricas de M3S01:
+Respostas teóricas de M3S01:
 
 - [Ex01](/C:/Users/deni_/projeto_analise_preditiva/exercicios/m3s01/ex01/README.md)
 - [Ex02](/C:/Users/deni_/projeto_analise_preditiva/exercicios/m3s01/ex02/README.md)
 - [Ex03](/C:/Users/deni_/projeto_analise_preditiva/exercicios/m3s01/ex03/README.md)
 - [Ex04](/C:/Users/deni_/projeto_analise_preditiva/exercicios/m3s01/ex04/README.md)
 
-## Boas praticas para os proximos exercicios
+## Boas práticas para os próximos exercícios
 
-- Crie uma nova pasta para cada exercicio, por exemplo `ex03/`, `ex04/`.
-- Deixe em `src/` apenas o que for reutilizavel.
-- Guarde respostas teoricas em `README.md` dentro da pasta do exercicio.
-- Evite caminhos absolutos no codigo.
-- Mantenha a base fora do GitHub quando ela nao puder ser publicada.
+- Crie uma nova pasta para cada exercício, por exemplo `ex03/`, `ex04/`.
+- Deixe em `src/` apenas o que for reutilizável.
+- Guarde respostas teóricas em `README.md` dentro da pasta do exercício.
+- Evite caminhos absolutos no código.
+- Mantenha a base fora do GitHub quando ela não puder ser publicada.

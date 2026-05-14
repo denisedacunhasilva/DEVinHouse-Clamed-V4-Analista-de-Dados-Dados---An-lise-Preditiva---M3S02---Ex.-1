@@ -23,24 +23,24 @@ def main() -> None:
     X, y = separar_xy(base)
     resultado = validar_regressao_linear_cv(X, y, cv=CV_FOLDS, random_state=RANDOM_STATE)
 
-    print("Exercicio M3S03 - Ex03")
+    print("Exercício M3S03 - Ex03")
     print()
     print(
-        f"Regressao Linear com validacao cruzada ({CV_FOLDS} folds, "
+        f"Regressão Linear com validação cruzada ({CV_FOLDS} folds, "
         f"random_state={RANDOM_STATE})"
     )
     print()
     print(f"R2 por fold: {formatar_scores(resultado['r2_scores'])}")
-    print(f"R2 medio: {resultado['r2_mean']:.4f}")
-    print(f"Desvio padrao R2: {resultado['r2_std']:.4f}")
+    print(f"R2 médio: {resultado['r2_mean']:.4f}")
+    print(f"Desvio padrão R2: {resultado['r2_std']:.4f}")
     print()
     print(f"MAE por fold: {formatar_scores(resultado['mae_scores'])}")
-    print(f"MAE medio: {resultado['mae_mean']:.4f}")
-    print(f"Desvio padrao MAE: {resultado['mae_std']:.4f}")
+    print(f"MAE médio: {resultado['mae_mean']:.4f}")
+    print(f"Desvio padrão MAE: {resultado['mae_std']:.4f}")
     print()
     print(f"RMSE por fold: {formatar_scores(resultado['rmse_scores'])}")
-    print(f"RMSE medio: {resultado['rmse_mean']:.4f}")
-    print(f"Desvio padrao RMSE: {resultado['rmse_std']:.4f}")
+    print(f"RMSE médio: {resultado['rmse_mean']:.4f}")
+    print(f"Desvio padrão RMSE: {resultado['rmse_std']:.4f}")
 
 
 if __name__ == "__main__":

@@ -2,19 +2,19 @@
 
 ## Objetivo
 
-Interpretar uma regressao linear simples usando `investimento_marketing` para
+Interpretar uma regressão linear simples usando `investimento_marketing` para
 prever `demanda`.
 
 ## Resultado observado
 
-- Equacao aproximada: `demanda = 231.61 - 0.001489 * investimento_marketing`
-- Relacao entre as variaveis: negativa
-- Correlacao aproximada: `-0.159`
+- Equação aproximada: `demanda = 231.61 - 0.001489 * investimento_marketing`
+- Relação entre as variáveis: negativa
+- Correlação aproximada: `-0.159`
 - R2 aproximado: `0.025`
 
-## Interpretacao
+## Interpretação
 
-A relacao observada na base e negativa e fraca. No contexto de negocio, isso
-nao deve ser interpretado como prova de causalidade. O resultado sugere apenas
-que o investimento em marketing, sozinho, nao explica bem a demanda neste
+A relação observada na base é negativa e fraca. No contexto de negócio, isso
+não deve ser interpretado como prova de causalidade. O resultado sugere apenas
+que o investimento em marketing, sozinho, não explica bem a demanda neste
 conjunto de dados.

@@ -2,11 +2,11 @@
 
 ## Objetivo
 
-Classificar o problema como regressao ou classificacao.
+Classificar o problema como regressão ou classificação.
 
 ## Resposta
 
-O problema e de **regressao**, porque a variavel alvo `demanda` e numerica.
+O problema é de **regressão**, porque a variável alvo `demanda` é numérica.
 
-Como o objetivo e prever um valor quantitativo, e nao uma categoria, a tarefa
-nao e de classificacao.
+Como o objetivo é prever um valor quantitativo, e não uma categoria, a tarefa
+não é de classificação.

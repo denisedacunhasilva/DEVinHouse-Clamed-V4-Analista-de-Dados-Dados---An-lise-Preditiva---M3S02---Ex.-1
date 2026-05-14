@@ -4,13 +4,13 @@
 
 Treinar um segundo modelo utilizando `DecisionTreeRegressor`.
 
-## Base de referencia
+## Base de referência
 
 O projeto usa a mesma base local:
 
 `data/raw/dados_AP.csv`
 
-Referencia informada no card:
+Referência informada no card:
 
 - [Base no Google Drive](https://drive.google.com/file/d/137zf2K5lqh_FAdVKkHiHFPQ6KOJ7gtNq/view?usp=drive_link)
 
@@ -28,15 +28,15 @@ python exercicios/m3s03/ex01/decision_tree_regressor.py
 
 - carrega a base
 - separa `X` e `y`
-- divide os dados em 80% treino e 20% teste
+- divide os dados em 80% para treino e 20% para teste
 - treina um `DecisionTreeRegressor`
-- gera previsoes no conjunto de teste
+- gera previsões no conjunto de teste
 
 ## Resultado obtido na base atual
 
 - modelo treinado com sucesso
-- profundidade da arvore: `32`
-- numero de folhas: `15110`
+- profundidade da árvore: `32`
+- número de folhas: `15110`
 - `MAE = 11.7173`
 - `RMSE = 14.7410`
 - `R2 = 0.9874`

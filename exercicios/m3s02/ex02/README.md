@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Criar um codigo em Python que divida a base em 80% para treino e 20% para
+Criar um código em Python que divida a base em 80% para treino e 20% para
 teste utilizando `train_test_split`.
 
 ## Arquivo principal

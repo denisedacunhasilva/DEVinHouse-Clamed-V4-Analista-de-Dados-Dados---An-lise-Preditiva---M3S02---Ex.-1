@@ -2,10 +2,10 @@
 
 ## Objetivo
 
-Criar um codigo em Python que separe:
+Criar um código em Python que separe:
 
-- `X`: variaveis preditoras
-- `y`: variavel resposta
+- `X`: variáveis preditoras
+- `y`: variável resposta
 
 ## Arquivo principal
 

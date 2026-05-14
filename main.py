@@ -6,12 +6,12 @@ from src.analise_preditiva import (
 
 
 def main() -> None:
-    """Executa um fluxo rapido de leitura da base e divisao treino/teste."""
+    """Executa um fluxo rápido de leitura da base e divisão treino/teste."""
     base = carregar_base()
     X, y = separar_xy(base)
     X_train, X_test, y_train, y_test = dividir_treino_teste(X, y)
 
-    print("Projeto de analise preditiva carregado com sucesso.")
+    print("Projeto de análise preditiva carregado com sucesso.")
     print()
     print(f"Total de linhas da base: {len(base)}")
     print(f"Formato de X: {X.shape}")

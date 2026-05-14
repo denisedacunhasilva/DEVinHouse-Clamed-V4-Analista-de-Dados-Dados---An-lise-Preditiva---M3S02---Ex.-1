@@ -2,16 +2,16 @@
 
 ## Objetivo
 
-Identificar a variavel resposta e as variaveis preditoras com base na base
+Identificar a variável resposta e as variáveis preditoras com base na base
 fornecida.
 
 ## Resposta
 
-- Variavel resposta: `demanda`
-- Variaveis preditoras: `investimento_marketing`, `preco_medicamento`, `mes`
+- Variável resposta: `demanda`
+- Variáveis preditoras: `investimento_marketing`, `preco_medicamento`, `mes`
 
 ## Justificativa
 
-Em analise preditiva, a variavel resposta e aquela que desejamos prever.
-Nesta base, a melhor candidata e `demanda`, porque representa o resultado de
+Em análise preditiva, a variável resposta é aquela que desejamos prever.
+Nesta base, a melhor candidata é `demanda`, porque representa o resultado de
 interesse. As demais colunas funcionam como entradas do modelo.

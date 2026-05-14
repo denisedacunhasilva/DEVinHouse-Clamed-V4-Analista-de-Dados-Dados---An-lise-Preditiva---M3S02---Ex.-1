@@ -2,11 +2,11 @@
 
 ## Objetivo
 
-Calcular as metricas `MAE`, `RMSE` e `R2` para avaliar o modelo de regressao.
+Calcular as métricas `MAE`, `RMSE` e `R2` para avaliar o modelo de regressão.
 
 ## Modelo utilizado
 
-Foi considerado um modelo de **regressao linear** com as variaveis preditoras:
+Foi considerado um modelo de **regressão linear** com as variáveis preditoras:
 
 - `investimento_marketing`
 - `preco_medicamento`
@@ -30,7 +30,7 @@ python exercicios/m3s02/ex03/metricas_regressao.py
 - `RMSE = 28.0073`
 - `R2 = 0.9544`
 
-## Observacao
+## Observação
 
-A interpretacao dessas metricas foi organizada no exercicio
+A interpretação dessas métricas foi organizada no exercício
 `M3S02 - Ex04`.

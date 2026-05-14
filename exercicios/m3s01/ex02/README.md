@@ -2,15 +2,15 @@
 
 ## Objetivo
 
-Explicar como um modelo preditivo pode apoiar a previsao de demanda no contexto
-farmaceutico e citar uma decisao de negocio relacionada.
+Explicar como um modelo preditivo pode apoiar a previsão de demanda no contexto
+farmacêutico e citar uma decisão de negócio relacionada.
 
 ## Resposta
 
-Um modelo preditivo pode apoiar a previsao de demanda ao estimar quantas
-unidades de um medicamento tendem a ser vendidas em determinado periodo com
-base em variaveis como preco, investimento em marketing e mes.
+Um modelo preditivo pode apoiar a previsão de demanda ao estimar quantas
+unidades de um medicamento tendem a ser vendidas em determinado período com
+base em variáveis como preço, investimento em marketing e mês.
 
-Uma decisao de negocio que pode ser tomada com esse modelo e o planejamento de
-estoque e reposicao. Se houver previsao de aumento na demanda, a empresa pode
-ajustar compra ou producao para evitar ruptura.
+Uma decisão de negócio que pode ser tomada com esse modelo é o planejamento de
+estoque e reposição. Se houver previsão de aumento na demanda, a empresa pode
+ajustar compra ou produção para evitar ruptura.

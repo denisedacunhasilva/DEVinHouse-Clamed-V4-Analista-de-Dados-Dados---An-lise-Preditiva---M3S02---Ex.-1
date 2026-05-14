@@ -21,11 +21,11 @@ def main() -> None:
     X_train, X_test, y_train, y_test = dividir_treino_teste(X, y)
 
     modelos = {
-        "Regressao Linear": treinar_regressao_linear(X_train, y_train),
-        "Arvore de Decisao": treinar_arvore_decisao(X_train, y_train),
+        "Regressão Linear": treinar_regressao_linear(X_train, y_train),
+        "Árvore de Decisão": treinar_arvore_decisao(X_train, y_train),
     }
 
-    print("Exercicio M3S03 - Ex02")
+    print("Exercício M3S03 - Ex02")
     print()
 
     for nome, modelo in modelos.items():
@@ -43,7 +43,7 @@ def main() -> None:
         print(f"  Teste  - RMSE: {metricas_test['rmse']:.4f}")
         print(f"  Teste  - R2: {metricas_test['r2']:.4f}")
 
-        if nome == "Arvore de Decisao":
+        if nome == "Árvore de Decisão":
             print(f"  Profundidade: {modelo.get_depth()}")
             print(f"  Folhas: {modelo.get_n_leaves()}")
 

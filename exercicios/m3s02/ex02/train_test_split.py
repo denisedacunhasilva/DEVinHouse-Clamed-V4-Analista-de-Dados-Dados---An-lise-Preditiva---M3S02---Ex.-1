@@ -13,7 +13,7 @@ def main() -> None:
     X, y = separar_xy(base)
     X_train, X_test, y_train, y_test = dividir_treino_teste(X, y)
 
-    print("Exercicio M3S02 - Ex02")
+    print("Exercício M3S02 - Ex02")
     print()
     print(f"Formato de X_train: {X_train.shape}")
     print(f"Formato de X_test: {X_test.shape}")

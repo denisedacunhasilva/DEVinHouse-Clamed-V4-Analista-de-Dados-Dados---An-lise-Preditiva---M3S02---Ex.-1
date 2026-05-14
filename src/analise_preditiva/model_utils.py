@@ -7,7 +7,7 @@ from .config import CV_FOLDS, RANDOM_STATE
 
 
 def treinar_regressao_linear(X_train, y_train) -> LinearRegression:
-    """Treina um modelo de regressao linear."""
+    """Treina um modelo de regressão linear."""
     modelo = LinearRegression()
     modelo.fit(X_train, y_train)
     return modelo
@@ -25,7 +25,7 @@ def treinar_arvore_decisao(
 
 
 def avaliar_modelo_regressao(y_true, y_pred) -> dict[str, float]:
-    """Calcula metricas basicas para regressao."""
+    """Calcula métricas básicas para regressão."""
     mae = mean_absolute_error(y_true, y_pred)
     rmse = mean_squared_error(y_true, y_pred) ** 0.5
     r2 = r2_score(y_true, y_pred)
@@ -43,7 +43,7 @@ def validar_regressao_linear_cv(
     cv: int = CV_FOLDS,
     random_state: int = RANDOM_STATE,
 ) -> dict[str, object]:
-    """Calcula validacao cruzada para regressao linear."""
+    """Calcula validação cruzada para regressão linear."""
     modelo = LinearRegression()
     estrategia_cv = KFold(n_splits=cv, shuffle=True, random_state=random_state)
 
