@@ -1,40 +1,27 @@
-from pathlib import Path
-
-import pandas as pd
-
-PROJECT_ROOT = Path(__file__).resolve().parent
-DATA_PATH = PROJECT_ROOT / "data" / "raw" / "dados_AP.csv"
-TARGET_COLUMN = "demanda"
-PREDICTOR_COLUMNS = ["investimento_marketing", "preco_medicamento", "mes"]
+from src.analise_preditiva import (
+    carregar_base,
+    dividir_treino_teste,
+    separar_xy,
+)
 
 
-def carregar_base(csv_path: Path = DATA_PATH) -> pd.DataFrame:
-    """Carrega a base de dados a partir do arquivo CSV do projeto."""
-    return pd.read_csv(csv_path)
+def main() -> None:
+    """Executa um fluxo rapido de leitura da base e divisao treino/teste."""
+    base = carregar_base()
+    X, y = separar_xy(base)
+    X_train, X_test, y_train, y_test = dividir_treino_teste(X, y)
 
-
-def separar_xy(
-    df: pd.DataFrame,
-    predictor_columns: list[str] = PREDICTOR_COLUMNS,
-    target_column: str = TARGET_COLUMN,
-) -> tuple[pd.DataFrame, pd.Series]:
-    """Separa X (preditoras) e y (variavel resposta)."""
-    X = df[predictor_columns].copy()
-    y = df[target_column].copy()
-    return X, y
+    print("Projeto de analise preditiva carregado com sucesso.")
+    print()
+    print(f"Total de linhas da base: {len(base)}")
+    print(f"Formato de X: {X.shape}")
+    print(f"Formato de y: {y.shape}")
+    print()
+    print(f"Formato de X_train: {X_train.shape}")
+    print(f"Formato de X_test: {X_test.shape}")
+    print(f"Formato de y_train: {y_train.shape}")
+    print(f"Formato de y_test: {y_test.shape}")
 
 
 if __name__ == "__main__":
-    base = carregar_base()
-    X, y = separar_xy(base)
-
-    print(f"Arquivo carregado: {DATA_PATH}")
-    print()
-    print("X (variaveis preditoras):")
-    print(X.head())
-    print()
-    print("y (variavel resposta):")
-    print(y.head())
-    print()
-    print(f"Formato de X: {X.shape}")
-    print(f"Formato de y: {y.shape}")
+    main()
