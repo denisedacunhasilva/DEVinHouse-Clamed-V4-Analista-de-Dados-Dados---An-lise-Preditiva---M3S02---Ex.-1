@@ -3,6 +3,8 @@ from pathlib import Path
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
+from .config import RANDOM_STATE, TEST_SIZE
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_PATH = PROJECT_ROOT / "data" / "raw" / "dados_AP.csv"
 TARGET_COLUMN = "demanda"
@@ -28,8 +30,8 @@ def separar_xy(
 def dividir_treino_teste(
     X: pd.DataFrame,
     y: pd.Series,
-    test_size: float = 0.2,
-    random_state: int = 42,
+    test_size: float = TEST_SIZE,
+    random_state: int = RANDOM_STATE,
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series]:
     """Divide os dados em 80% treino e 20% teste por padrao."""
     return train_test_split(X, y, test_size=test_size, random_state=random_state)

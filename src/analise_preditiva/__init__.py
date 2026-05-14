@@ -1,3 +1,4 @@
+from .config import CV_FOLDS, RANDOM_STATE, TEST_SIZE
 from .data_utils import (
     DATA_PATH,
     PREDICTOR_COLUMNS,
@@ -14,9 +15,12 @@ from .model_utils import (
 )
 
 __all__ = [
+    "CV_FOLDS",
     "DATA_PATH",
     "PREDICTOR_COLUMNS",
+    "RANDOM_STATE",
     "TARGET_COLUMN",
+    "TEST_SIZE",
     "avaliar_modelo_regressao",
     "carregar_base",
     "dividir_treino_teste",

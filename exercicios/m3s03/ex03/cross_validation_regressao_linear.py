@@ -5,7 +5,13 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.analise_preditiva import carregar_base, separar_xy, validar_regressao_linear_cv
+from src.analise_preditiva import (
+    CV_FOLDS,
+    RANDOM_STATE,
+    carregar_base,
+    separar_xy,
+    validar_regressao_linear_cv,
+)
 
 
 def formatar_scores(scores) -> str:
@@ -15,11 +21,14 @@ def formatar_scores(scores) -> str:
 def main() -> None:
     base = carregar_base()
     X, y = separar_xy(base)
-    resultado = validar_regressao_linear_cv(X, y, cv=5)
+    resultado = validar_regressao_linear_cv(X, y, cv=CV_FOLDS, random_state=RANDOM_STATE)
 
     print("Exercicio M3S03 - Ex03")
     print()
-    print("Regressao Linear com validacao cruzada (5 folds)")
+    print(
+        f"Regressao Linear com validacao cruzada ({CV_FOLDS} folds, "
+        f"random_state={RANDOM_STATE})"
+    )
     print()
     print(f"R2 por fold: {formatar_scores(resultado['r2_scores'])}")
     print(f"R2 medio: {resultado['r2_mean']:.4f}")

@@ -1,7 +1,9 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import KFold, cross_val_score
 from sklearn.tree import DecisionTreeRegressor
+
+from .config import CV_FOLDS, RANDOM_STATE
 
 
 def treinar_regressao_linear(X_train, y_train) -> LinearRegression:
@@ -14,7 +16,7 @@ def treinar_regressao_linear(X_train, y_train) -> LinearRegression:
 def treinar_arvore_decisao(
     X_train,
     y_train,
-    random_state: int = 42,
+    random_state: int = RANDOM_STATE,
 ) -> DecisionTreeRegressor:
     """Treina um modelo DecisionTreeRegressor."""
     modelo = DecisionTreeRegressor(random_state=random_state)
@@ -38,24 +40,26 @@ def avaliar_modelo_regressao(y_true, y_pred) -> dict[str, float]:
 def validar_regressao_linear_cv(
     X,
     y,
-    cv: int = 5,
+    cv: int = CV_FOLDS,
+    random_state: int = RANDOM_STATE,
 ) -> dict[str, object]:
     """Calcula validacao cruzada para regressao linear."""
     modelo = LinearRegression()
+    estrategia_cv = KFold(n_splits=cv, shuffle=True, random_state=random_state)
 
-    r2_scores = cross_val_score(modelo, X, y, cv=cv, scoring="r2")
+    r2_scores = cross_val_score(modelo, X, y, cv=estrategia_cv, scoring="r2")
     mae_scores = -cross_val_score(
         modelo,
         X,
         y,
-        cv=cv,
+        cv=estrategia_cv,
         scoring="neg_mean_absolute_error",
     )
     rmse_scores = -cross_val_score(
         modelo,
         X,
         y,
-        cv=cv,
+        cv=estrategia_cv,
         scoring="neg_root_mean_squared_error",
     )
 
