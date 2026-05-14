@@ -19,6 +19,7 @@ projeto_analise_preditiva/
 |   |   |   |-- README.md
 |   |   |-- ex03/
 |   |   |   |-- README.md
+|   |   |   |-- cross_validation_regressao_linear.py
 |   |   |-- ex04/
 |   |   |   |-- README.md
 |   |-- m3s02/
@@ -63,7 +64,8 @@ projeto_analise_preditiva/
 - `exercicios/m3s02/ex04/`: interpretacao das metricas do `Ex03`.
 - `exercicios/m3s03/ex01/`: segundo modelo com `DecisionTreeRegressor`.
 - `exercicios/m3s03/ex02/`: comparacao entre Regressao Linear e Arvore de Decisao.
-- `exercicios/m3s03/ex03` e `ex04`: espacos reservados para os proximos itens.
+- `exercicios/m3s03/ex03/`: validacao cruzada da Regressao Linear com `cross_val_score`.
+- `exercicios/m3s03/ex04`: espaco reservado para o proximo item.
 - `data/raw/`: base local usada no projeto.
 
 ## Base de dados
@@ -120,6 +122,12 @@ M3S03 Exercicio 2:
 
 ```powershell
 python exercicios/m3s03/ex02/comparar_modelos.py
+```
+
+M3S03 Exercicio 3:
+
+```powershell
+python exercicios/m3s03/ex03/cross_validation_regressao_linear.py
 ```
 
 Respostas teoricas de M3S01:

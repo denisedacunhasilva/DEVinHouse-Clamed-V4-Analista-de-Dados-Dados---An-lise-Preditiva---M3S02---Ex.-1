@@ -10,6 +10,7 @@ from .model_utils import (
     avaliar_modelo_regressao,
     treinar_arvore_decisao,
     treinar_regressao_linear,
+    validar_regressao_linear_cv,
 )
 
 __all__ = [
@@ -22,4 +23,5 @@ __all__ = [
     "separar_xy",
     "treinar_arvore_decisao",
     "treinar_regressao_linear",
+    "validar_regressao_linear_cv",
 ]
